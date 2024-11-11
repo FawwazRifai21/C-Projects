@@ -7,8 +7,9 @@ int main() {
         int b;
         int c;
 
-        printf("----====PERIODIX====----\n");
-        printf("       by fawwaz       \n\n");
+        printf("----================----\n\n");
+        printf("        PERIODIX       \n");
+        printf("     made by fawwaz       \n\n");
         printf("----================----\n");
         printf("type 1 to search element\n");
         printf("type 2 to exit app\n");
@@ -65,7 +66,7 @@ int searchelement() {
         };
 
         int atomic_number;
-        
+        printf("----================----\n");
         printf("enter atomic number to search for element\n");
         printf("ENTER: ");
         scanf("%d", &atomic_number);
