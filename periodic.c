@@ -35,8 +35,9 @@ int main() {
 
         int atomic_number;
 
-        printf("PERIODIX\n");
-        printf("by fawwaz\n\n");
+        printf("----====PERIODIX====----\n");
+        printf("       by fawwaz       \n\n");
+        printf("----================----
         printf("type 1 to search element\n");
         printf("type 2 to exit app\n");
         printf("ENTER: ");
