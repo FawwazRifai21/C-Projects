@@ -21,7 +21,7 @@ char *months[] =
     "\n\n\nDecember"
 };
 
-int inputeyear(void) {
+int inputyear(void) {
     int year;
     printf("please enter a year:");
     scanf("%d", &year);
@@ -38,14 +38,14 @@ int determineleapyear(int year) {
     }
 }
 
-void determinedaycode(int year) {
-    int daycode
-    int d1, d2, d3;
+int determinedaycode(int year) {
+    int daycode ;
+    int d1, d2, d3 ;
     
-    d1=(year - 1.)/4.0;
-    d2=(year - 1.)/100.;
-    d3=(year - 1.)/400.;
-    daycode=(year + d1 - d2 + d3) %7;
+    d1=(year - 1.)/4.0 ;
+    d2=(year - 1.)/100. ;
+    d3=(year - 1.)/400. ; 
+    daycode=(year + d1 - d2 + d3) %7 ;
     return daycode;
 }
 
@@ -55,7 +55,26 @@ int calendar(int year, int daycode) {
         printf("%s", months[month]);
         printf("\n\nSun Mon Tue Wed Thu Fri Sat\n");
         
+        for(day = 1; day <= 1 + daycode * 5; day++) {
+            printf(" ");
+        }
+        for(day = 1; day <= days_in_month[month]; day++) {
+            printf("%2d", day);
+            if((day + daycode) %7 > 0) {
+                printf(" ");
+            } else {
+                printf("\n");
+            }
+            daycode = (daycode + days_in_month[month]) %7 ;
+        }
     }
 }
 
-
+int main() {
+    int year, daycode, leapyear;
+    year = inputyear();
+    daycode=determinedaycode(year);
+    determineleapyear(year);
+    calendar(year, daycode);
+    printf("\n");
+}
