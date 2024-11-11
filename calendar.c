@@ -23,7 +23,11 @@ char *months[] =
 
 int inputyear(void) {
     int year;
-    printf("please enter a year:");
+    printf("----==============----\n\n");
+    printf("        SCHEDX          \n");
+    printf("   project by fawwaz     \n\n");
+    printf("----==============----\n\n");
+    printf("ENTER A YEAR: ");
     scanf("%d", &year);
     return year;
 }
